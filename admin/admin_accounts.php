@@ -37,16 +37,17 @@ if (isset($_POST['delete'])) {
    <title>Admins Accounts</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="../assets/css/admin_style.css">
+   <link rel="icon" type="image/png" href="../public/logo/snapmind.png">
 </head>
 <body>
 <?php include '../components/admin_header.php' ?>
 
 <section class="accounts">
-   <h1 class="heading">admins account</h1>
+   <h1 class="heading">Admins Account</h1>
    <div class="box-container">
       <div class="box" style="order: -2;">
-         <p>register new admin</p>
-         <a href="register_admin.php" class="option-btn" style="margin-bottom: .5rem;">register</a>
+         <p>Register New Admin</p>
+         <a href="register_admin.php" class="option-btn" style="margin-bottom: .5rem;">Register</a>
       </div>
 
       <?php
@@ -59,9 +60,9 @@ if (isset($_POST['delete'])) {
             $total_admin_posts = $count_admin_posts->fetchColumn();
       ?>
       <div class="box" style="order: <?= $fetch_accounts['id'] == $admin_id ? '-1' : '0'; ?>;">
-         <p>admin id: <span><?= htmlspecialchars($fetch_accounts['id']); ?></span></p>
-         <p>username: <span><?= htmlspecialchars($fetch_accounts['name']); ?></span></p>
-         <p>total posts: <span><?= $total_admin_posts; ?></span></p>
+         <p>Admin ID: <span><?= htmlspecialchars($fetch_accounts['id']); ?></span></p>
+         <p>Username: <span><?= htmlspecialchars($fetch_accounts['name']); ?></span></p>
+         <p>Total Posts: <span><?= $total_admin_posts; ?></span></p>
          <div class="flex-btn">
             <?php if ($fetch_accounts['id'] == $admin_id) { ?>
                <a href="update_profile.php" class="option-btn" style="margin-bottom: .5rem;">update</a>

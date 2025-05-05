@@ -17,12 +17,14 @@ include '../components/like_post.php';
    <title>Posts</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="icon" type="image/png" href="../public/logo/snapmind.png">
+
 </head>
 <body>
 <?php include '../components/user_header.php'; ?>
 
 <section class="posts-container">
-   <h1 class="heading">Latest Posts</h1>
+   <h1 class="heading">Latest Posts 🕜</h1>
    <div class="box-container">
       <?php
       $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ?");

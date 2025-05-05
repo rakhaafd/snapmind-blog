@@ -17,6 +17,8 @@ include '../components/like_post.php';
    <title>Home</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="icon" type="image/png" href="../public/logo/snapmind.png">
+
 </head>
 <body>
 <?php include '../components/user_header.php'; ?>
@@ -36,9 +38,9 @@ include '../components/like_post.php';
             $count_user_likes->execute([$user_id]);
             $total_user_likes = $count_user_likes->fetchColumn();
          ?>
-         <p>welcome <span><?= htmlspecialchars($fetch_profile['name']); ?></span></p>
-         <p>Total Comments: <span><?= $total_user_comments; ?></span></p>
-         <p>Posts Liked: <span><?= $total_user_likes; ?></span></p>
+         <p><strong>Welcome! 🚀 <span><?= htmlspecialchars($fetch_profile['name']); ?></span></strong></p>
+         <p><strong>Total Comments: <span><?= $total_user_comments; ?></span></strong></p>
+         <p><strong>Posts Liked: <span><?= $total_user_likes; ?></span></strong></p>
          <a href="update.php" class="btn">Update Profile</a>
          <div class="flex-btn">
             <a href="user_likes.php" class="option-btn">Likes</a>
@@ -53,7 +55,7 @@ include '../components/like_post.php';
          <?php } ?>
       </div>
       <div class="box">
-         <p>Categories</p>
+         <p><strong>Categories 📚</strong></p>
          <div class="flex-box">
             <a href="category.php?category=nature" class="links">Nature</a>
             <a href="category.php?category=education" class="links">Education</a>
@@ -69,7 +71,7 @@ include '../components/like_post.php';
          </div>
       </div>
       <div class="box">
-         <p>Authors</p>
+         <p><strong>Authors 👤</strong></p>
          <div class="flex-box">
             <?php
             $select_authors = $conn->prepare("SELECT DISTINCT name FROM `admin` LIMIT 10");
@@ -91,7 +93,7 @@ include '../components/like_post.php';
 </section>
 
 <section class="posts-container">
-   <h1 class="heading">Latest Posts</h1>
+   <h1 class="heading">Latest Posts 🕜</h1>
    <div class="box-container">
       <?php
       $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE status = ? LIMIT 6");

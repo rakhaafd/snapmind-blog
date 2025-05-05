@@ -12,7 +12,7 @@ if (!empty($message)) {
 ?>
 
 <header class="header">
-   <a href="dashboard.php" class="logo">Admin <span>Panel</span></a>
+   <a href="dashboard.php" class="logo"><strong>Admin <span>Panel</span></strong></a>
    <div class="profile">
       <?php
       $select_profile = $conn->prepare("SELECT * FROM `admin` WHERE id = ?");

@@ -17,6 +17,8 @@ include '../components/like_post.php';
    <title>Authors</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="icon" type="image/png" href="../public/logo/snapmind.png">
+
 </head>
 <body>
 <?php include '../components/user_header.php'; ?>
@@ -40,10 +42,10 @@ include '../components/like_post.php';
             $total_admin_comments = $count_admin_comments->fetchColumn();
       ?>
       <div class="box">
-         <p>author: <span><?= htmlspecialchars($fetch_authors['name']); ?></span></p>
-         <p>total posts: <span><?= $total_admin_posts; ?></span></p>
-         <p>posts likes: <span><?= $total_admin_likes; ?></span></p>
-         <p>posts comments: <span><?= $total_admin_comments; ?></span></p>
+         <p>Author: <span><?= htmlspecialchars($fetch_authors['name']); ?></span></p>
+         <p>Total Posts: <span><?= $total_admin_posts; ?></span></p>
+         <p>Posts Likes: <span><?= $total_admin_likes; ?></span></p>
+         <p>Posts Comments: <span><?= $total_admin_comments; ?></span></p>
          <a href="author_posts.php?author=<?= htmlspecialchars($fetch_authors['name']); ?>" class="btn">view posts</a>
       </div>
       <?php
