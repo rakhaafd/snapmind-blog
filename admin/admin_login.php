@@ -49,9 +49,9 @@ if (!empty($message)) {
 
 <section class="form-container">
    <form action="" method="POST">
-      <h3>Login Now</h3>
-      <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <h3>Login Admin</h3>
+      <input type="text" name="name" maxlength="20" required placeholder="enter admin username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" maxlength="20" required placeholder="enter admin password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="login now" name="submit" class="btn">
    </form>
 </section>
