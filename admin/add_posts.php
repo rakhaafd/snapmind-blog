@@ -23,7 +23,7 @@ if (isset($_POST['publish']) || isset($_POST['draft'])) {
       $image = filter_var($_FILES['image']['name'], FILTER_SANITIZE_STRING);
       $image_size = $_FILES['image']['size'];
       $image_tmp_name = $_FILES['image']['tmp_name'];
-      $image_folder = '../public/img/' . $image;
+      $image_folder = '../public/upload/' . $image;
 
       $select_image = $conn->prepare("SELECT * FROM `posts` WHERE image = ? AND admin_id = ?");
       $select_image->execute([$image, $admin_id]);

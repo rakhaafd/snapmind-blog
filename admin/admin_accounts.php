@@ -15,7 +15,7 @@ if (isset($_POST['delete'])) {
    $delete_image->execute([$admin_id]);
    while ($fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC)) {
       if ($fetch_delete_image['image']) {
-         unlink('../public/img/' . $fetch_delete_image['image']);
+         unlink('../public/upload/' . $fetch_delete_image['image']);
       }
    }
 

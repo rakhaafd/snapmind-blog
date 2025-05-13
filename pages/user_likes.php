@@ -59,7 +59,7 @@ include '../components/like_post.php';
             </div>
          </div>
          <?php if ($fetch_posts['image']) { ?>
-         <img src="../public/img/<?= htmlspecialchars($fetch_posts['image']); ?>" class="post-image" alt="">
+         <img src="../public/upload/<?= htmlspecialchars($fetch_posts['image']); ?>" class="post-image" alt="">
          <?php } ?>
          <div class="post-title"><?= htmlspecialchars($fetch_posts['title']); ?></div>
          <div class="post-content content-150"><?= htmlspecialchars($fetch_posts['content']); ?></div>

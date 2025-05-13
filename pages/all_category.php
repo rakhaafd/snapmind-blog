@@ -20,9 +20,9 @@ include '../components/like_post.php';
    <link rel="icon" type="image/png" href="../public/logo/snapmind.png">
 
 </head>
-<body>
 <?php include '../components/user_header.php'; ?>
 
+<body>
 <section class="categories">
    <h1 class="heading">Post Categories</h1>
    <div class="box-container">
